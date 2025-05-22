@@ -14,43 +14,13 @@ import {
 } from 'react-native';
 import MapView, { Marker, Region } from 'react-native-maps';
 import * as Location from 'expo-location';
+import { trucks } from '../data/trucks';
+
 
 const cuisines = ['Tacos', 'Burgers', 'Vegan'];
 
 const mapRef = useRef<MapView>(null);
 
-const trucks = [
-  {
-    id: 1,
-    name: 'Taco Town',
-    cuisine: 'Tacos',
-    rating: 4.5,
-    views: 120,
-    latitude: 37.78825,
-    longitude: -122.4324,
-    logo: require('../../assets/images/taco-happy.png'),
-  },
-  {
-    id: 2,
-    name: 'Burger Boss',
-    cuisine: 'Burgers',
-    rating: 4.2,
-    views: 95,
-    latitude: 37.78855,
-    longitude: -122.4312,
-    logo: require('../../assets/images/burger.webp'),
-  },
-  {
-    id: 3,
-    name: 'Vegan Vibes',
-    cuisine: 'Vegan',
-    rating: 4.8,
-    views: 110,
-    latitude: 37.78725,
-    longitude: -122.4334,
-    logo: require('../../assets/images/vegan.png'),
-  },
-];
 
 export default function HomeScreen() {
   const [search, setSearch] = useState('');
